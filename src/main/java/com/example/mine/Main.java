@@ -1,6 +1,7 @@
 package com.example.mine;
 
 import java.util.Random;
+import java.util.function.IntBinaryOperator;
 
 public class Main {
 
@@ -23,13 +24,13 @@ public class Main {
             greeting3.sayHW();
 
         //////////////////////////////////////////////////////////////////
-        Calculator calculator = (int x, int y) -> {
+        IntBinaryOperator calculator = (int x, int y) -> {
             Random random = new Random() ;
-            int randoNumber = random.nextInt(50);
+            int randoNumber = random.nextInt(3);
             return x * y  + randoNumber;
             //return x * y;
         };
-        System.out.println(calculator.calculate(5, 6));
+        System.out.println(calculator.applyAsInt(5, 6));
 
 
     }
